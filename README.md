@@ -1,50 +1,14 @@
+#TODO 
+* Make sure initial questions can't crash (hit enter no num)
+* fix binary with integers in lists
+
+
+
+
+
 # Searching & Sorting
 
 This problem set focuses on a number of concepts, all through the lens of searching and sorting algorithms. You'll be asked to implement a number of searching and sorting algorithms that handle inputs and produce outputs in the form of arrays or lists. Some of your implementations will be iterative, while others will make use of recursion.
-
-## Getting Started
-
-To get started, you'll need to create a [GitHub](https://github.com/) repository to store your code. After cloning my skeleton repository, you'll need to setup a remote to push your code to your repository instead of mine. Steps to accomplish this are outlined below.
-
-### Setup
-
-01. Login to your [GitHub](https://github.com/) account and create a new repository named `searching-and-sorting`.
-02. In GitBash, navigate to your `APCSA` folder.
-03. Clone my skeleton repository from [GitHub](https://github.com/). This will make a copy of my repository and store it locally.
-```
-git clone git@github.com:rwilson-ucvts/java-searching-and-sorting-skeleton.git
-```
-04. The cloning process will have created a folder named `java-searching-and-sorting-skeleton`. Rename this folder to `searching-and-sorting`.
-```
-mv java-searching-and-sorting-skeleton searching-and-sorting
-```
-05. Change directories to get into your `searching-and-sorting` folder.
-```
-cd searching-and-sorting
-```
-06. Originally, the remote will be pointing at my repository. We need to overwrite this.
-```
-git remote rename origin upstream
-```
-07. Lastly, we need to add a new remote that points at the repository you created earlier. Make sure you replace `YOUR-USERNAME` with your actual username.
-```
-git remote add origin git@github.com:YOUR-USERNAME/searching-and-sorting.git
-```
-08. Launch Eclipse and set the `Workspace` to the `APCSA` folder you created on your `Desktop`. Make sure you're using your `Workspace`, as others' will be similarly named.
-09. From within the `Package Explorer` (the left-most panel), right-click and select `Import...`.
-10. Select `Git > Projects from Git`, and click `Next >`.
-11. Select `Existing local repository` and click `Next >`.
-12. Click the `Add...` button, and then the `Browse...` button.
-13. Navigate to the `APCSA` folder on your `Desktop`, click the `pset3` project folder, and click `Open`.
-14. Select the checkbox next to your project and click `Finish`.
-15. Now that we've imported the Git project, we can click `Next >`, `Next >`, and `Finish` once more.
-
-You should now see a `Project` in the `Package Explorer` in Eclipse.
-
-16. Expand the `Project` folder. You should see the `JRE System Library` folder, as well as the `src` folder.
-17. Expand the `src` folder. You should see a single source file named `SearchAndSort.java`. Double-click to open it.
-
-If you see the following starter code, then you've correctly cloned and setup your project.
 
 ## Exercises
 
