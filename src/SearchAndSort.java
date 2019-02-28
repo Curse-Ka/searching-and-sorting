@@ -30,7 +30,7 @@ public class SearchAndSort {
 					if (responseData == 1)
 						responseValid = (!((response.charAt(i) >= '0' && response.charAt(i) <= '9') || response.charAt(i) == ',')) ? false : responseValid;
 				}
-				responseValid = (response.charAt(response.length()-1) == ',') ? false : responseValid;
+				responseValid = (response.length() == 0 || response.charAt(response.length()-1) == ',') ? false : responseValid;
 				if (!responseValid) {
 					System.out.println("Invalid Reponse, please try again.");
 				}
@@ -155,7 +155,9 @@ public class SearchAndSort {
 			} else {
 				System.out.println("Error: Inputs: responseData=" + responseData+ ", reponseStorage=" + responseStorage);
 			}
-			System.out.println("\n****************************\n");
+			System.out.println("\nHit [ENTER] to continue");
+			s.sc.nextLine();
+			System.out.println("****************************\n");
 		}
 	}
 	
@@ -282,12 +284,12 @@ public class SearchAndSort {
 	private int[] insertion(int[] nums) {
 		int length = nums.length;
 		for (int i = 1; i < length; i++) {
-			int x = nums[i];
+			int comp = nums[i];
 			int j;
-			for (j = i-1; j >= 0 && nums[j] > x; j--) {
+			for (j = i-1; j >= 0 && nums[j] > comp; j--) {
 				nums[j+1] = nums[j];
 			}
-			nums[j+1] = x;
+			nums[j+1] = comp;
 		}
 		return nums;
 	}
@@ -295,12 +297,12 @@ public class SearchAndSort {
 	private String[] insertion(String[] words) {
 		int length = words.length;
 		for (int i = 1; i < length; i++) {
-			String x = words[i];
+			String comp = words[i];
 			int j;
-			for (j = i-1; j >= 0 && (compareStrings(words[j],x) == '>'); j--) {
+			for (j = i-1; j >= 0 && (compareStrings(words[j],comp) == '>'); j--) {
 				words[j+1] = words[j];
 			}
-			words[j+1] = x;
+			words[j+1] = comp;
 		}
 		return words;
 	}
@@ -308,12 +310,12 @@ public class SearchAndSort {
 	private ArrayList<Integer> insertion(ArrayList<Integer> nums) {
 		int length = nums.size();
 		for (int i = 1; i < length; i++) {
-			int x = nums.get(i);
+			int comp = nums.get(i);
 			int j;
-			for (j = i-1; j >= 0 && nums.get(j) > x; j--) {
+			for (j = i-1; j >= 0 && nums.get(j) > comp; j--) {
 				nums.set(j+1, nums.get(j));
 			}
-			nums.set(j+1, x);
+			nums.set(j+1, comp);
 		}
 		return nums;
 	}
@@ -321,12 +323,12 @@ public class SearchAndSort {
 	private ArrayList<String> insertion(boolean randomassboolean, ArrayList<String> words) {
 		int length = words.size();
 		for (int i = 1; i < length; i++) {
-			String x = words.get(i);
+			String comp = words.get(i);
 			int j;
-			for (j = i-1; j >= 0 && (compareStrings(words.get(j), x) == '>'); j--) {
+			for (j = i-1; j >= 0 && (compareStrings(words.get(j), comp) == '>'); j--) {
 				words.set(j+1, words.get(j));
 			}
-			words.set(j+1, x);
+			words.set(j+1, comp);
 		}
 		return words;
 	}
